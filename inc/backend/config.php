@@ -24,10 +24,149 @@ $one->inc_footer                 = 'inc/backend/views/inc_footer.php';
 
 $one->main_nav                   = array(
     array(
-        'name'  => 'Dashboard',
+        'name'  => 'Friendship Perk &amp; Brew',
         'icon'  => 'si si-speedometer',
-        'url'   => 'be_pages_dashboard.php'
+        'url'   => 'index.php'
     ),
+
+
+    array(
+        'name'  => 'Active Reports',
+        'type'  => 'heading'
+    ),
+
+
+    array(
+        'name'  => 'Starting reports',
+        'icon'  => 'si si-star',
+        'sub'   => array(
+            array(
+                'name'  => 'Annual income forecast',
+                'url'   => '#'
+            ),
+            array(
+                'name'  => 'Top selling items',
+                'url'   => '#'
+            ),
+            array(
+                'name'  => 'Customer frequency',
+                'url'   => '#'
+            ),
+            array(
+                'name'  => 'List of items',
+                'url'   => '#'
+            )
+        )
+    ),
+    array(
+        'name'  => 'Reports',
+        'type'  => 'heading'
+    ),
+    array(
+        'name'  => 'Projections',
+        'icon'  => 'si si-graph',
+        'sub'   => array(
+            array(
+                'name'  => 'Baseline revenue forecast',
+                'url'   => '#'
+            )
+        )
+    ),
+    array(
+        'name'  => 'Transactions',
+        'icon'  => 'si si-bag',
+        'sub'   => array(
+            array(
+                'name'  => 'Most popular items',
+                'url'   => '#'
+            ),
+            array(
+                'name'  => 'Top earners',
+                'url'   => '#'
+            ),
+            array(
+                'name'  => 'Least liked items',
+                'url'   => '#'
+            )
+
+        )
+    ),
+    array(
+        'name'  => 'Customers',
+        'icon'  => 'si si-people',
+        'sub'   => array(
+            array(
+                'name'  => 'Most loyal customers',
+                'url'   => '#'
+            ),
+            array(
+                'name'  => 'First time customers',
+                'url'   => '#'
+            ),
+            array(
+                'name'  => 'Users who left reviews',
+                'url'   => '#'
+            )
+
+        )
+    ),
+    array(
+        'name'  => 'Uncategorized',
+        'icon'  => 'si si-people',
+        'sub'   => array(
+            array(
+                'name'  => 'Most profitable items',
+                'url'   => '#'
+            ),
+            array(
+                'name'  => 'Impact of item prices changes',
+                'url'   => '#'
+            ),
+            array(
+                'name'  => 'Size of menu vs overall sales',
+                'url'   => '#'
+            ),
+            array(
+                'name'  => 'Punch cards - how many used',
+                'url'   => '#'
+            )
+        )
+    ),
+    array(
+        'name'  => 'Settings',
+        'type'  => 'heading'
+    ),
+    array(
+        'name'  => 'APIs',
+        'icon'  => 'si si-calendar',
+        'sub'   => array(
+            array(
+                'name'  => 'Clover',
+                'url'   => '#'
+            ),
+            array(
+                'name'  => 'Square',
+                'url'   => '#'
+            ),
+            array(
+                'name'  => 'Google Reviews',
+                'url'   => '#'
+            ),
+            array(
+                'name'  => 'Yelp',
+                'url'   => '#'
+            ),
+            array(
+                'name'  => 'Twitter',
+                'url'   => '#'
+            ),
+            array(
+                'name'  => 'Facebook',
+                'url'   => '#'
+            )
+        )
+    ),
+/*
     array(
         'name'  => 'User Interface',
         'type'  => 'heading'
@@ -661,5 +800,5 @@ $one->main_nav                   = array(
                 'url'   => 'op_error_503.php'
             )
         )
-    )
+    )*/
 );

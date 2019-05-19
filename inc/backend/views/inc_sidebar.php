@@ -28,7 +28,7 @@
         <a class="font-w600 text-dual" href="index.php">
             <i class="fa fa-circle-notch text-primary"></i>
             <span class="smini-hide">
-                <span class="font-w700 font-size-h5">ne</span> <span class="font-w400"><?php echo $one->version; ?></span>
+                <span class="font-w700 font-size-h5">&nbsp;Analytics</span> <span class="font-w400"></span>
             </span>
         </a>
         <!-- END Logo -->
