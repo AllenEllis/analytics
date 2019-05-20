@@ -1,0 +1,18 @@
+{% if categories %}
+    <ul>
+    {% for category in categories %}
+        <li>{{ category.name }}</li>
+            <ul>
+            {% for report in reports %}
+                {% if report.categoryName_id == category.id %}
+                <li><a href="/reports/{{ report.categoryName|slugify }}/{{ report.name|slugify }}/">{{ report.name }}</a></li>
+                {% endif %}
+            {% endfor %}
+            </ul>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No reports are available.</p>
+{% endif %}
+
+
