@@ -16,8 +16,9 @@ def nav(request):
 
 
 def report(request, category, name):
-    response = "You're looking at the report for report %s."
-    response += category
-    return HttpResponse(response % name)
+    #report = Report.objects.get(id__exact=)
+    #context = { 'report': report }
+    #return render(request, 'reports/report.html', context)
+    return HttpResponse("This is where the report would go")
 
 
