@@ -15,7 +15,7 @@ def nav(request):
     return render(request, 'reports/nav.html', context)
 
 
-def report(request, category, name):
+def report(request, category, name, id):
     #report = Report.objects.get(id__exact=)
     #context = { 'report': report }
     #return render(request, 'reports/report.html', context)

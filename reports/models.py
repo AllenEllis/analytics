@@ -19,23 +19,23 @@ class Report(models.Model):
     source = models.CharField('The name of the source file that generates the report', max_length=200)
     categoryName = models.ForeignKey(Category, on_delete=models.CASCADE)
     active = models.BooleanField(default=True)
-    slug = models.SlugField(
-        default='',
-        editable=False,
-        max_length=settings.REPORT_TITLE_MAX_LENGTH,
-    )
+    #slug = models.SlugField(
+    #    default='',
+    #    editable=False,
+    #    max_length=settings.REPORT_TITLE_MAX_LENGTH,
+    #)
 
     def __str__(self):
         return self.name
 
-    def get_absolute_url(self):
-        kwargs = {
-            'pk': self.id,
-            'slug': self.slug
-        }
-        return reverse('report-pk-slug-etail', kwargs=kwargs)
+    #def get_absolute_url(self):
+    #    kwargs = {
+    #        'pk': self.id,
+    #        'slug': self.slug
+    #    }
+    #    return reverse('report-pk-slug-etail', kwargs=kwargs)
 
-    def save(self, *args, **kwargs):
-        value = self.title
-        self.slug = slugify(value, allow_unicode=True)
-        super().save(*args, **kwargs)
+    #def save(self, *args, **kwargs):
+    #    value = self.title
+    #    self.slug = slugify(value, allow_unicode=True)
+    #    super().save(*args, **kwargs)
