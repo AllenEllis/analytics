@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Report
 from .models import Category
+from . import reports
 from django.http import HttpResponse
 
 
@@ -16,9 +17,14 @@ def nav(request):
 
 
 def report(request, category, name, id):
-    #report = Report.objects.get(id__exact=)
-    #context = { 'report': report }
-    #return render(request, 'reports/report.html', context)
-    return HttpResponse("This is where the report would go")
+    report = Report.objects.get(id__exact=id)
+    html = report.render()
+    context = { 'report': report, 'html': html }
+    #return render(request, 'reports/report.html',x context)
+
+    #context = {'reports': reports}
+
+    return render(request, 'reports/report.html', context)
+    #return HttpResponse(report)
 
 

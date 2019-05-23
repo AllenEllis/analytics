@@ -2,9 +2,12 @@ from django.db import models
 from django.conf import settings
 from django.urls import reverse
 from django.utils.text import slugify
+import importlib
+from . import punch_cards
+from . import closeouts
+
 
 ## A model to store a list of which reports the user has installed
-
 
 class Category(models.Model):
     name = models.CharField(max_length=200)
@@ -27,6 +30,26 @@ class Report(models.Model):
 
     def __str__(self):
         return self.name
+
+    def render(self):
+
+        #filename = "punch_cards"
+        #report_code = importlib.import_module("punch_cards", package="src")
+        #Todo make dynamic
+        #HTML = importlib.import_module(filename, package=None)
+
+        HTML = "No HTML provided"
+
+        if(self.source == "punch-cards"):
+            source = punch_cards
+
+        if(self.source == "closeouts"):
+            source = closeouts
+
+        HTML = source.rendercode()
+
+        #return "Hi"
+        return HTML
 
     #def get_absolute_url(self):
     #    kwargs = {
