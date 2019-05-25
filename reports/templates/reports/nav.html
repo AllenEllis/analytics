@@ -5,7 +5,7 @@
             <ul>
             {% for report in reports %}
                 {% if report.categoryName_id == category.id %}
-                <li><a href="/reports/{{ report.categoryName|slugify }}/{{ report.name|slugify }}/">{{ report.name }}</a></li>
+                <li><a href="/reports/{{ report.categoryName|slugify }}/{{ report.name|slugify }}/{{ report.id }}">{{ report.name }}</a></li>
                 {% endif %}
             {% endfor %}
             </ul>
