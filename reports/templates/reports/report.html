@@ -1,4 +1,8 @@
 <h1>{{ report.name }}</h1>
 Category: {{ report.categoryName}}
-
+<hr />
 {{ html }}
+
+{% load plotly_dash %}
+
+{% plotly_app name="SimpleExample" %}l
