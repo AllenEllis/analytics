@@ -1,2 +1,4 @@
-.idea
 .idea/
+.idea
+reports/__pycache__/
+reports/__pycache__
