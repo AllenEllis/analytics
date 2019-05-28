@@ -29,6 +29,10 @@ from django.conf.urls.static import static
 import demo.plotly_apps    # pylint: disable=unused-import
 import demo.dash_apps      # pylint: disable=unused-import
 import demo.bootstrap_app  # pylint: disable=unused-import
+import demo.report_allen  # pylint: disable=unused-import
+import demo.report_orders  # pylint: disable=unused-import
+import demo.report_projections  # pylint: disable=unused-import
+import demo.report_lineitems  # pylint: disable=unused-import
 
 from django_plotly_dash.views import add_to_session
 
@@ -46,6 +50,9 @@ urlpatterns = [
     url('^demo-eight', session_state_view, {'template_name':'demo_eight.html'}, name="demo-eight"),
     url('^demo-nine', TemplateView.as_view(template_name='demo_nine.html'), name="demo-nine"),
     url('^demo-allen', TemplateView.as_view(template_name='demo_allen.html'), name="demo-allen"),
+    url('^report_orders', TemplateView.as_view(template_name='report_orders.html'), name="report_orders"),
+    url('^report_projections', TemplateView.as_view(template_name='report_projections.html'), name="report_projections"),
+    url('^report_lineitems', TemplateView.as_view(template_name='report_lineitems.html'), name="report_lineitems"),
     url('^admin/', admin.site.urls),
     url('^django_plotly_dash/', include('django_plotly_dash.urls')),
 
