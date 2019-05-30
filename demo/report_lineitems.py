@@ -46,7 +46,7 @@ from django_plotly_dash.consumers import send_to_pipe_channel
 
 #pylint: disable=too-many-arguments, unused-argument, unused-variable
 
-app = DjangoDash('report_projections')
+app = DjangoDash('report_lineitems')
 import dash
 from dash.dependencies import Input, Output
 import dash_table
@@ -128,7 +128,3 @@ def update_graph(rows, derived_virtual_selected_rows):
             for column in ['sum', 'count']
         ]
     )
-
-
-if __name__ == '__main__':
-    app.run_server(debug=True)

@@ -1,20 +1,16 @@
 {%extends "base.html"%}
 {%load plotly_dash%}
 
-{%block title%}Demo Seven - Dash Bootstrap Components{%endblock%}
+{%block temp-cat-starting-reports%}open{%endblock%}
+{%block temp-report-orders%}active{%endblock%}
+
+{%block title%}Closeout totals{%endblock%}
+{%block reporttitle%}Closeout totals{%endblock%}
+{%block reporttitle2%}Closeout totals{%endblock%}
+{%block summary%}Totals of closeouts over time{%endblock%}
 
 {%block content%}
-<h1>Dash Bootstrap Components</h1>
-<p>
-  This example demonstrates the use of the dash-bootstrap-components package.
-</p>
-
-<p></p>
-<div class="card border-dark">
-  <div class="card-body">
-    <div class="{%plotly_class name="report_orders"%}">
-      {%plotly_app name="report_orders" ratio=0.2 %}
-    </div>
-  </div>
-</div>
+  Select which days of the week to include. Then you can aggregate by days/weeks/months.
+  {% load plotly_dash %}
+  {% plotly_direct name="report_orders" %}
 {%endblock%}

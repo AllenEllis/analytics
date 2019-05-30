@@ -195,3 +195,7 @@ PLOTLY_COMPONENTS = [
     'dpd_components',
     'dpd_static_support',
 ]
+
+INTERNAL_IPS = [
+    '10.10.30.230'
+]
