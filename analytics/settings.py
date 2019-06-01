@@ -25,7 +25,7 @@ SECRET_KEY = '&t=p%3m06qjcrk5eiw2=w$$ztolgtvxgaf+b!o7hs2ri2#jiun'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['10.10.30.54']
+ALLOWED_HOSTS = ['10.10.30.54', 'dev-analytics.allenell.is']
 
 
 # Application definition
